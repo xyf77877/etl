@@ -1,0 +1,17 @@
+desensitize:
+  # 实体类DTO路径
+  - dto: cn.tongdun.demo.demo1.dto.RiskDto
+    # 脱敏字段
+    fields:
+      # 字段名
+      - name: email
+        # 规则
+        rule: email
+        # 0静态 1动态
+        type: 0
+
+  - dto: xxxDTO1
+    fields:
+      - name: name
+        rule: name
+        type: 0

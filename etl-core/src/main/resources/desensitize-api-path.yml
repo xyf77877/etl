@@ -1,0 +1,3 @@
+desensitize-api-path:
+  - path: "/test/inter"
+  - path: "/test/inter1"
