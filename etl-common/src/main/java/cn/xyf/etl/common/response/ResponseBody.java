@@ -17,6 +17,14 @@ public class ResponseBody<T> {
         responseBody.data = data;
         return responseBody;
     }
+    public static <T> ResponseBody<T> success() {
+        ResponseBody<T> responseBody = new ResponseBody<>();
+        responseBody.code = ResultCode.SUCCESS.getCode();
+        responseBody.success = true;
+        responseBody.msg = ResultCode.SUCCESS.getMsg();
+        responseBody.data = null;
+        return responseBody;
+    }
     public static <T> ResponseBody<T> error(ResultCode code) {
         ResponseBody<T> responseBody = new ResponseBody<>();
         responseBody.code = code.getCode();
