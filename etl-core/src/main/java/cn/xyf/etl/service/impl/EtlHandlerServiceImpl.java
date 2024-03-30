@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.UUID;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 
 @Service
 public class EtlHandlerServiceImpl implements EtlHandlerService {
@@ -25,5 +27,7 @@ public class EtlHandlerServiceImpl implements EtlHandlerService {
         dto.setCreatTime(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         BeanUtils.copyProperties(dto, etlHandlerDo);
         etlHandlerRepository.save(etlHandlerDo);
+        AtomicInteger integer = new AtomicInteger();
+        AtomicReference<String> atomicReference = new AtomicReference<>();
     }
 }

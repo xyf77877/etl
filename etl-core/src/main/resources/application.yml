@@ -6,8 +6,9 @@ spring:
   mvc:
     servlet:
       path: /etl
-datasource:
-  driverClassName: com.mysql.jdbc.Driver
-  url: jdbc:mysql://localhost:3306/etl?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Hongkong
-  username: root
-  password: root
+
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/etl?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Hongkong
+    username: root
+    password: root
